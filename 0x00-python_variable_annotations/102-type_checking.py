@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Module for a function that zooms in on an array."""
 
+
 from typing import Tuple, List, Any
+
 
 def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> List[Any]:
     """Returns a zoomed-in version of the input array."""
@@ -10,6 +12,7 @@ def zoom_array(lst: Tuple[Any, ...], factor: int = 2) -> List[Any]:
         for i in range(factor)
     ]
     return zoomed_in
+
 
 array = (12, 72, 91)  # Change to tuple
 

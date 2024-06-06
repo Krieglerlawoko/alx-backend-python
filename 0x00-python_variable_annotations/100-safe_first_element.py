@@ -3,8 +3,9 @@
 
 from typing import Sequence, Any, Union
 
+
 def safe_first_element(lst: Sequence) -> Union[Any, None]:
-    """Returns the first element of the list if it exists, otherwise returns None."""
+    """first element of list if it exists, else None."""
     if lst:
         return lst[0]
     else:
