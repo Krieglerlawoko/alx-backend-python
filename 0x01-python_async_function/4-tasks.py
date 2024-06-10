@@ -7,6 +7,7 @@ import asyncio
 from typing import List
 from random import uniform
 
+
 async def task_wait_random(max_delay: int) -> float:
     '''
     Args:
