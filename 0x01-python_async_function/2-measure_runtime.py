@@ -5,14 +5,10 @@ Module to measure runtime of wait_n.
 
 import asyncio
 import time
-from typing import Tuple
 from 1-concurrent_coroutines import wait_n
 
-
-def measure_time(n: int, max_delay: int) -> float:
+def measure_time(n, max_delay):
     '''
-    Measure total execution time for wait_n(n, max_delay)
-
     Args:
         n (int): Number of times to call wait_n.
         max_delay (int): Maximum delay value.
