@@ -1,17 +1,27 @@
 #!/usr/bin/env python3
 '''
-Module for concurrent task coroutines.
+Module for creating asyncio tasks.
 '''
 
 import asyncio
 from typing import List
-from task_wait_random import task_wait_random
+from random import uniform
+
+async def task_wait_random(max_delay: int) -> float:
+    '''
+    Args:
+        max_delay (int): The maximum delay value.
+
+    Returns:
+        float: The actual delay.
+    '''
+    delay = uniform(0, max_delay)
+    await asyncio.sleep(delay)
+    return delay
+
 
 async def task_wait_n(n: int, max_delay: int) -> List[float]:
     '''
-    Spawn task_wait_random n times and return
-    the delays in ascending order.
-
     Args:
         n (int): Number of times to call task_wait_random.
         max_delay (int): Maximum delay value.
