@@ -5,8 +5,8 @@ import asyncio
 import random
 
 
-async def async_generator():
-    """Yield a random number between 0 and 10, 10 times"""
-    for _ in range(10):
-        await asyncio.sleep(1)
-        yield random.uniform(0, 10)
+async def wait_random(max_delay: int = 10) -> float:
+    """Waits for a random delay between 0 and max_delay"""
+    rand_number = random.uniform(0, max_delay)
+    await asyncio.sleep(rand_number)
+    return rand_number
