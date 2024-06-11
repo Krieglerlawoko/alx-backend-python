@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""async_comprehension"""
-
+"""Coroutine that collects random numbers using an async comprehension."""
 
 from 0_async_generator import async_generator
 
