@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Measure runtime of executing 
+Measure runtime of executing
 async comprehensions in parallel.
 """
 
