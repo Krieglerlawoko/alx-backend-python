@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
-"""Coroutine that generates random numbers."""
+"""
+Coroutine that generates random numbers.
+"""
 
 import asyncio
 import random
+from typing import Generator
 
 
-async def wait_random(max_delay: int = 10) -> float:
-    """Waits for a random delay between 0 and max_delay"""
-    rand_number = random.uniform(0, max_delay)
-    await asyncio.sleep(rand_number)
-    return rand_number
+async def async_generator() -> Generator[float, None, None]:
+    """
+    Loop 10 times, asynchronously wait 1 second,
+    then yield a random number between 0 and 10.
+    """
+    for _ in range(10):
+        await asyncio.sleep(1)
+        yield random.uniform(0, 10)
